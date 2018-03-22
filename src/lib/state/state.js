@@ -16,7 +16,7 @@ function getInitialState() {
   }
 }
 
-export default function reducer(state=getInitialState(), action) {
+export default function reducer(state=getInitialState(), action={}) {
   switch (action.type) {
     case ACTION_SET_TEMPERATURE:
       return {...state, temperature: action.temperature}

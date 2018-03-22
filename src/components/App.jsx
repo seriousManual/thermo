@@ -1,14 +1,18 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-function App(props) {
+export function App(props) {
   let {temperature, humidity} = props
   
   return (
     <div>
-      temperature: {temperature}
-      <br />
-      humidity: {humidity}
+      <div id="temperature">
+        temperature: {temperature}
+      </div>
+
+      <div id="humidity">
+        humidity: {humidity}
+      </div>
     </div>
   )
 }

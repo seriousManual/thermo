@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 
-import reducer, {setTemperature, setHumidity} from './lib/state'
+import reducer, {setTemperature, setHumidity} from './lib/state/state'
 import Sensor from './lib/Sensor'
 import App from './components/App'
 
