@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the App with the provides properties 1`] = `
+"<div>
+  <div id=\\"temperature\\">
+    temperature: 
+    23
+  </div>
+  <div id=\\"humidity\\">
+    humidity: 
+    42
+  </div>
+</div>"
+`;

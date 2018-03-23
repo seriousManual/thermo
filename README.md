@@ -18,6 +18,7 @@ After completion of each assingment consult your supervisor for a review of your
 2. Clone it to your local machine
 3. `npm install` the dependencies
 4. `npm start` to start the application stub
+5. `npm test` to run the tests
 
 ## Acceptance Criteria
 
@@ -25,13 +26,14 @@ After completion of each assingment consult your supervisor for a review of your
     1. Render the lowest temperature ever encountered
     2. Render the highest temperature ever envountered
     3. Add a reset button that resets the highest and lowest temperature
-2. Render the current humidity, rounded to one decimal
+2. Render the current humidity, rounded whole numbers
     1. Render the lowest humidity ever encountered
     2. Render the highest humidity ever encountered
     3. Add a reset button that resets the highest and lowest humidity
 3. Render a global reset button which resets all max and all min values
 4. Render a Button that toggles the current temperature schema (Celsius <-> Fahrenheit)
-5. Show a climate indicator which identifies the quality of the current climate, it consists of a smiley face (sad, happy) and a label
+5. **Bonus Assignment**    
+Show a climate indicator which identifies the quality of the current climate, it consists of a smiley face (sad, happy) and a label
     * humidity
         * humidity < 40%: sad, "dry"
         * 40% < humidity < 60%: happy
@@ -53,11 +55,20 @@ Design Actions and Action Creators that are suitable to fulfill the Acceptance C
 Design a Reducer that uses the actions from assignment #2 and the global application state from assignment #1.
 
 ### 4. Unit Tests
-Write Tests that verifiy that the combination of reducer and actions result in a correct new state. Pay special attention to the immutibility of your application state!
+Write Tests that verifiy that the combination of reducer and actions result in a correct new state.  
+Pay special attention to the immutibility of your application state!
+In the folder `__tests__` you find some simple tests that correspond with the code stubs already existing.
 
 ### 5. Frontend
 Design a component tree that shows the information.
 Do not use the data from the application state, instead use dummy data for the sample frontend.
+
+### 6. Unit Tests / Snapshot tests of components
+Create unit tests that test the behaviour of your components.
+In the folder `__tests__` you find a simple component test that checks for certain features in the rendered output.
+
+In the sample test of App.jsx you also find that a snapshot test is added there, too. The snapshot test compares the output of a rendered component with the output of a previous test run and tells you if something has changed in the generated markup.
+If the snapshot test fails, it is you task to inspect the error(s) and to regenerate the snapshots using the command `npm test -- -u` if the output correctly corresponds to your changes.
 
 ### 6. State Connection
 Connect the application via the react-redux bindings to the global application state.
